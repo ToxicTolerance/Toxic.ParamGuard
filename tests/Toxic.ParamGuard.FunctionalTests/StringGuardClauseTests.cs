@@ -1,6 +1,6 @@
 namespace Toxic.ParamGuard.FunctionalTests
 {
-    public class Tests
+    public class StringGuardClauseTests
     {
         [SetUp]
         public void Setup()
