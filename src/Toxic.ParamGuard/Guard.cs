@@ -7,7 +7,7 @@ namespace Toxic.ParamGuard
     /// <summary>
     /// Provides entrypoint for parameterchecking with guard clauses.
     /// </summary>
-    public sealed class Guard : IGuard
+    public sealed class Guard 
     {
         /// <summary>
         /// Static constructor

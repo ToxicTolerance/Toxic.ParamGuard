@@ -14,6 +14,7 @@ namespace Toxic.ParamGuard
         /// <exception cref="ArgumentNullException"></exception>
         public static IValueGuardParameter<string> IfNullOrWhiteSpace(this IGuardParameter<string> param, string? message = null)
         {
+            /*Convert to IValueGuardParamer because it exposes the Value-Property*/
             IValueGuardParameter<string> parameter = param as IValueGuardParameter<string>;
 
             if (string.IsNullOrWhiteSpace(parameter.Value))
@@ -35,6 +36,7 @@ namespace Toxic.ParamGuard
         /// <exception cref="ArgumentNullException"></exception>
         public static IValueGuardParameter<string> IfNullOrEmpty(this IGuardParameter<string> param, string? message = null)
         {
+            /*Convert to IValueGuardParamer because it exposes the Value-Property*/
             IValueGuardParameter<string> parameter = param as IValueGuardParameter<string>;
 
             if (string.IsNullOrEmpty(parameter.Value))

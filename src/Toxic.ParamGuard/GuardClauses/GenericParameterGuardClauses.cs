@@ -5,7 +5,7 @@ namespace Toxic.ParamGuard
     public static class GenericParameterGuardClauses
     {
         /// <summary>
-        /// 
+        /// Throws an <see cref="ArgumentNullException"></see> when the parameter is zero.
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="param"></param>
@@ -14,6 +14,7 @@ namespace Toxic.ParamGuard
         /// <exception cref="ArgumentNullException"></exception>
         public static IValueGuardParameter<T> IfNull<T>(this IGuardParameter<T> param, string message = null)
         {
+            /*Convert to IValueGuardParamer because it exposes the Value-Property*/
             IValueGuardParameter<T> parameter = param as IValueGuardParameter<T>;
 
             if (parameter.Value == null)
@@ -26,7 +27,7 @@ namespace Toxic.ParamGuard
         }
 
         /// <summary>
-        /// 
+        /// Throws an <see cref="ArgumentNullException"></see> when the <see cref="{T[]}"/> is null.
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="param"></param>
@@ -35,6 +36,7 @@ namespace Toxic.ParamGuard
         /// <exception cref="ArgumentNullException"></exception>
         public static IValueGuardParameter<T[]> IfNull<T>(this IGuardParameter<T[]> param, string message = null)
         {
+            /*Convert to IValueGuardParamer because it exposes the Value-Property*/
             IValueGuardParameter<T[]> parameter = param as IValueGuardParameter<T[]>;
 
             if (parameter.Value == null)

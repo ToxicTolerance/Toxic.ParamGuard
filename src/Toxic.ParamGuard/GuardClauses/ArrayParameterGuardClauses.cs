@@ -8,7 +8,7 @@ namespace Toxic.ParamGuard
     public static class ArrayParameterGuardClauses
     {
         /// <summary>
-        /// 
+        /// Throws an <see cref="ArgumentNullException"/> if one of the Elements contained in the <see cref="List{T}"/> is null.
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="param"></param>
@@ -17,6 +17,7 @@ namespace Toxic.ParamGuard
         /// <exception cref="ArgumentNullException"></exception>
         public static IValueGuardParameter<T[]> IfContainsNullElements<T>(this IGuardParameter<T[]> param, string? message = null)
         {
+            /*Convert to IValueGuardParamer because it exposes the Value-Property*/
             IValueGuardParameter<T[]> parameter = param as IValueGuardParameter<T[]>;
 
             if (parameter.Value.Where(p => p == null).Count() > 0)
@@ -29,7 +30,7 @@ namespace Toxic.ParamGuard
         }
 
         /// <summary>
-        /// 
+        /// Throws an <see cref="ArgumentNullException"/> if Count of the <see cref="List{T}"/> is 0 (Zero).
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="param"></param>
@@ -38,6 +39,7 @@ namespace Toxic.ParamGuard
         /// <exception cref="ArgumentOutOfRangeException"></exception>
         public static IValueGuardParameter<T[]> IfLengthZero<T>(this IGuardParameter<T[]> param, string? message = null)
         {
+            /*Convert to IValueGuardParamer because it exposes the Value-Property*/
             IValueGuardParameter<T[]> parameter = param as IValueGuardParameter<T[]>;
 
             if (parameter.Value.Length <= 0)
