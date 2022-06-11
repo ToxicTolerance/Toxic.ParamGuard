@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{DE67DD97-5B1
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{E31279BD-69B8-49A8-9CEF-0061DED8B681}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toxic.ParamGuard.FunctionalTests", "tests\Toxic.ParamGuard.FunctionalTests\Toxic.ParamGuard.FunctionalTests.csproj", "{4023329E-ABDE-4C2C-8367-9FD7B1263F0B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Toxic.ParamGuard.FunctionalTests", "tests\Toxic.ParamGuard.FunctionalTests\Toxic.ParamGuard.FunctionalTests.csproj", "{4023329E-ABDE-4C2C-8367-9FD7B1263F0B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
